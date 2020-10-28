@@ -6,10 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
+import com.example.ejemplo2activities.clases.*;
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_CIUDAD = "ciudad";
     public static final String EXTRA_HABITANTE = "habitante";
+    public static final String EXTRA_OBJETO_CIUDAD = "objetoCiudad";
     public EditText edt_ciudad=null;
     public EditText edt_habitantes=null;
     @Override
@@ -33,12 +34,15 @@ public class MainActivity extends AppCompatActivity {
         int habitantes = 0;
         try{
             habitantes= Integer.valueOf(textoHabitantes);
-            Bundle extras = new Bundle();
-            extras.putString(EXTRA_CIUDAD, ciudad);
-            extras.putInt(EXTRA_HABITANTE, habitantes);
-            intent.putExtras(extras);
+            Ciudad c = new Ciudad(ciudad, habitantes);
+            intent.putExtra(EXTRA_OBJETO_CIUDAD, c);
+           // Bundle extras = new Bundle();
+            //extras.putString(EXTRA_CIUDAD, ciudad);
+            //extras.putInt(EXTRA_HABITANTE, habitantes);
+            //intent.putExtras(extras);
            // intent.putExtra(EXTRA_CIUDAD, ciudad);
             //intent.putExtra(EXTRA_HABITANTE, habitantes);
+            //-----------------------------------------------------
             startActivity(intent);
         }catch (Exception e){
             edt_habitantes.setError("añade un numero");

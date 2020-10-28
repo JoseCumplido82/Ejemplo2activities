@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.ejemplo2activities.clases.Ciudad;
+
 import org.w3c.dom.Text;
 
 public class Activity2 extends AppCompatActivity {
@@ -18,14 +20,18 @@ public class Activity2 extends AppCompatActivity {
         setContentView(R.layout.activity_2);
         //--------mostrar datos pantalla1---------
         Intent intent = getIntent();
-        Bundle extras = intent.getExtras();
-        if(extras != null)
+        //Bundle extras = intent.getExtras();
+        Ciudad c = (Ciudad)intent.getSerializableExtra(MainActivity.EXTRA_OBJETO_CIUDAD);
+        if(c != null)
         {
-        String ciudad = extras.getString(MainActivity.EXTRA_CIUDAD);
+            String ciudad = c.getNombre();
+
+        //String ciudad = extras.getString(MainActivity.EXTRA_CIUDAD);
        //String ciudad= intent.getStringExtra(MainActivity.EXTRA_CIUDAD);
        if(ciudad!=null) {
           // int habitantes = intent.getIntExtra(MainActivity.EXTRA_HABITANTE, 0);
-           int habitantes = extras.getInt(MainActivity.EXTRA_HABITANTE);
+           //int habitantes = extras.getInt(MainActivity.EXTRA_HABITANTE);
+           int habitantes = c.getHabitantes();
            //-----------------------------------------
            String texto = "ciudad-> " + ciudad + "\n" + "habitantes-> " + String.valueOf(habitantes);
            //----------------------------------------

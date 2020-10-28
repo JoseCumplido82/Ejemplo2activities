@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt_ir_activity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorAccent"
+        android:onClick="ir_activity"
+        android:text="@string/ir_a_activity_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCiudad"
+        android:layout_width="381dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="68dp"
+        android:background="@android:color/holo_green_dark"
+        android:ems="10"
+        android:hint="@string/ciudad"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_ir_activity2"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/edtHabitantes"
+        android:layout_width="379dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/holo_green_dark"
+        android:ems="10"
+        android:hint="@string/habitantes"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edtCiudad"
+        app:layout_constraintStart_toStartOf="@+id/edtCiudad"
+        app:layout_constraintTop_toBottomOf="@+id/edtCiudad"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/bt_enviar_activity2"
+        android:layout_width="127dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="144dp"
+        android:background="@color/colorAccent"
+        android:text="@string/enviar"
+        android:onClick="enviar_activity2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtHabitantes"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <Button
+        android:id="@+id/btnBundle"
+        android:layout_width="174dp"
+        android:layout_height="60dp"
+        android:background="#9C27B0"
+        android:text="ENVIAR CON BUNDLE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_enviar_activity2"
+        app:layout_constraintVertical_bias="0.489" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

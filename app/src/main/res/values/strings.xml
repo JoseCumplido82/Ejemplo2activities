@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejemplo2activities</string>
+    <string name="ir_a_activity_2">ir a activity 2</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="habitantes">Habitantes</string>
+    <string name="enviar">ENVIAR</string>
+</resources>
